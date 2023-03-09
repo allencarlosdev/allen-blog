@@ -1,4 +1,4 @@
-FROM richarvey/nginx-php-fpm
+FROM richarvey/nginx-php-fpm:2.0.4
 
 COPY . .
 
@@ -17,4 +17,4 @@ ENV LOG_CHANNEL stderr
 # Allow composer to run as root
 ENV COMPOSER_ALLOW_SUPERUSER 1
 
-CMD ["scripts/start.sh"]
+CMD ["/start.sh"]
